@@ -36,7 +36,7 @@ python manage.py migrate
 ## Documentation
 If you started the server, you can find the swagger documentation under the URL `/docs/`
 
-## <a name="deployment"></a> Deployment
+## Deployment
 **TODO**: Add additional notes about how to deploy this on a live system.
 
 ## Built With:
