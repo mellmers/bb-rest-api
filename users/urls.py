@@ -18,7 +18,7 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register('users', views.UserView)
+router.register(r'users', views.UserViewSet, basename='user')
 router.register('profiles', views.ProfileView)
 
 urlpatterns = [
