@@ -14,7 +14,7 @@ class Profile(models.Model):
     country = models.CharField(max_length=255, blank=True)
     clan = models.CharField(max_length=255, blank=True)
     games = models.CharField(max_length=255, blank=True)
-    gamertag = models.CharField(max_length=255, blank=True)
+    gamertag = models.CharField(max_length=255)
     logo = models.CharField(max_length=255, blank=True)
 
     def __str__(self):

@@ -10,6 +10,12 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
             'id', 'url', 'created_at', 'updated_at', 'bio', 'birth_date', 'city', 'country', 'clan', 'games',
             'gamertag', 'logo')
 
+    def __init__(self, *args, **kwargs):
+        super(ProfileSerializer, self).__init__(*args, **kwargs)
+        
+        self.fields["gamertag"].error_messages["required"] = u"gamertag is required"
+        self.fields["gamertag"].error_messages["blank"] = u"gamertag cannot be blank"
+
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
