@@ -19,7 +19,6 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet, basename='user')
-router.register('profiles', views.ProfileView)
 
 urlpatterns = [
     path('', include(router.urls))
